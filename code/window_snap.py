@@ -1,3 +1,6 @@
+## Modified
+## Added "snap_window_explicit"
+
 """Tools for voice-driven window management.
 
 Originally from dweil/talon_community - modified for newapi by jcaw.
@@ -192,6 +195,13 @@ class Actions:
 
         """
         _snap_window_helper(ui.active_window(), pos)
+
+    def snap_window_explicit(pos_name: str) -> None:
+        """Move the active window to a specific position on-screen.
+        Takes string argument instead of RelativeScreenPos"""
+
+        _snap_window_helper(ui.active_window(), _snap_positions[pos_name])
+
 
     def move_window_next_screen() -> None:
         """Move the active window to a specific screen."""

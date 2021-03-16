@@ -1,12 +1,20 @@
+## Modified
+# Added uppercase letters
+# Added voicecode key renamings
+
 from typing import Set
 
 from talon import Module, Context, actions, app
 import sys
 
-default_alphabet = "air bat cap drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yank zip".split(
+default_alphabet = "air bat cap drum each fine gust harp sit jury crunch look made near toy pit quench red sun trap urge vest whale plex yank fizz".split(
     " "
 )
-letters_string = "abcdefghijklmnopqrstuvwxyz"
+uppercase_alphabet = "ash baker chain dog egg fox gig horse ice jake king lash mule net oak page quail raft scout tide usurp vessel wicker xray yacht zoo".split(
+    " "
+)
+default_alphabet = default_alphabet + uppercase_alphabet
+letters_string = "abcdefghijklmnopqrstuvwxyz" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 default_digits = "zero one two three four five six seven eight nine".split(" ")
 numbers = [str(i) for i in range(10)]
@@ -224,9 +232,12 @@ simple_keys = [
 alternate_keys = {
     "delete": "backspace",
     "forward delete": "delete",
-    #'junk': 'backspace',
     "page up": "pageup",
     "page down": "pagedown",
+    'junk': 'backspace',
+    'randall': 'escape',
+    'tarp': 'tab',
+    'shock': 'enter',
 }
 # mac apparently doesn't have the menu key.
 if app.platform in ("windows", "linux"):

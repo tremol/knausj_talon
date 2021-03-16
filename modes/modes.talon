@@ -1,3 +1,6 @@
+## Modified
+# Added notification toggles
+
 #defines the various mode commands
 mode: all
 -
@@ -13,8 +16,13 @@ sleep all:
     user.mouse_sleep()
     speech.disable()
     user.engine_sleep()
-talon sleep: speech.disable()
-talon wake: speech.enable()
+talon sleep: 
+    speech.disable()
+    user.notify_off()
+    app.notify('', 'talon sleep')
+talon wake: 
+    speech.enable()
+    user.notify_on()
 # begin: these commands are really for windows & mac with Dragon.
 dragon mode: user.dragon_mode()
 talon mode: user.talon_mode()

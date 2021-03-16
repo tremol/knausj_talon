@@ -1,0 +1,14 @@
+- [ ] Add shortcut words like 
+  - [ ] peachy
+  - [ ] trough
+  - [ ] sage
+  - [ ] ricky, lefty, lecksey, ricksy, snipple, snipper
+  - [ ] remove slap
+  - [ ] posh, prank, coif, coalgap, 
+  - [ ] dizzle, rizzle
+- [ ] add pop for control mouse
+- [ ] add hiss for scrolling
+- [ ] try other speech engine
+  - [ ] or get dragon working
+- [X] toggle os notifications off when sleeping
+
