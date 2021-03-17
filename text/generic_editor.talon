@@ -1,31 +1,31 @@
-find it:
+(find it | marco):
     edit.find()
 
 next one:
     edit.find_next()
 
-go word left:
+(go word left | peg):
     edit.word_left()
 
-go word right:
+(go word right | fran):
     edit.word_right()
 
-go left:
+(go left | crimp):
     edit.left()
 
-go right:
+(go right | chris):
     edit.right()
 
-go up:
+(go up | jeep):
     edit.up()
 
-go down:
+(go down | doom):
     edit.down()
 
-go line start:
+(go line start | lefty):
     edit.line_start()
 
-go line end:
+(go line end | ricky):
     edit.line_end()
 
 go way left:
@@ -35,10 +35,10 @@ go way left:
 go way right:
     edit.line_end()
 
-go way down:
+(go way down | doomway):
     edit.file_end()
 
-go way up:
+(go way up | jeepway):
     edit.file_start()
 
 go page down:
@@ -48,43 +48,43 @@ go page up:
     edit.page_up()
 
 # selecting
-select line:
+(select line | shackle):
     edit.select_line()
 
-select all:
+(select all | olly):
     edit.select_all()
 
-select left:
+(select left | shrim):
     edit.extend_left()
 
-select right:
+(select right | shrish):
     edit.extend_right()
 
-select up:
+(select up | shreep):
     edit.extend_line_up()
 
-select down:
+(select down | shroom):
     edit.extend_line_down()
 
 select word:
     edit.select_word()
 
-select word left:
+(select word left | scram):
     edit.extend_word_left()
 
-select word right:
+(select word right | skittish):
     edit.extend_word_right()
 
-select way left:
+(select way left | lecksy):
     edit.extend_line_start()
 
-select way right:
+(select way right | ricksy):
     edit.extend_line_end()
 
-select way up:
+(select way up | shreepway):
     edit.extend_file_start()
 
-select way down:
+(select way down | shroomway):
     edit.extend_file_end()
 
 # editing
@@ -95,56 +95,56 @@ indent [more]:
     edit.indent_less()
 
 # deleting
-clear line:
+(clear | delete) line:
     edit.delete_line()
 
-clear left:
+((clear | delete) left | junk):
     key(backspace)
 
-clear right:
+((clear | delete) right | spunk):
     key(delete)
 
-clear up:
+(clear | delete) up:
     edit.extend_line_up()
     edit.delete()
 
-clear down:
+(clear | delete) down:
     edit.extend_line_down()
     edit.delete()
 
-clear word:
+((clear | delete) word | slurpies):
     edit.delete_word()
 
-clear word left:
+((clear | delete) word left | trough):
     edit.extend_word_left()
     edit.delete()
 
-clear word right:
+((clear | delete) word right | kite):
     edit.extend_word_right()
     edit.delete()
 
-clear way left:
+((clear | delete) way left | snipple):
     edit.extend_line_start()
     edit.delete()
 
-clear way right:
+((clear | delete) way right | snipper):
     edit.extend_line_end()
     edit.delete()
 
-clear way up:
+(clear | delete) way up:
     edit.extend_file_start()
     edit.delete()
 
-clear way down:
+(clear | delete) way down:
     edit.extend_file_end()
     edit.delete()
 
-clear all:
+(clear | delete) all:
     edit.select_all()
     edit.delete()
 
 #copy commands
-copy all:
+(copy all | allstoosh):
     edit.select_all()
     edit.copy()
 #to do: do we want these variants, seem to conflict

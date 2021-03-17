@@ -10,21 +10,22 @@
 #word cmd: "cmd"
 #word dup: "dup"
 #word shell: "shell".
-zoom in: edit.zoom_in()
-zoom out: edit.zoom_out()
+(zoom in | shompla): edit.zoom_in()
+(zoom out | shaman): edit.zoom_out()
 scroll up: edit.page_up()
 scroll down: edit.page_down()
-copy that: edit.copy()
-cut that: edit.cut()
-paste that: edit.paste()
-undo that: edit.undo()
-redo that: edit.redo()
-paste match: edit.paste_match_style()
-file save: edit.save()
-wipe: key(backspace)    
-(pad | padding): 
+(copy that | stoosh): edit.copy()
+(cut that | snatch): edit.cut()
+(paste that | spark): edit.paste()
+(undo that | dizzle): edit.undo()
+(redo that | rizzle): edit.redo()
+(paste match | spark match): edit.paste_match_style()
+(file save | sage): edit.save()
+# wipe: key(backspace)    
+# (pad | padding): 
+prank:
 	insert("  ") 
 	key(left)
-slap:
-	edit.line_end()
-	key(enter)
+# slap:
+# 	edit.line_end()
+# 	key(enter)

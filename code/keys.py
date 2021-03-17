@@ -230,11 +230,11 @@ simple_keys = [
 ]
 
 alternate_keys = {
-    "delete": "backspace",
+    # "delete": "backspace",
     "forward delete": "delete",
     "page up": "pageup",
     "page down": "pagedown",
-    'junk': 'backspace',
+    # 'junk': 'backspace', # defined in generic_editor.talon
     'randall': 'escape',
     'tarp': 'tab',
     'shock': 'enter',
