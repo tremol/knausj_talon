@@ -1,61 +1,58 @@
-question [mark]: "?"
-(downscore | underscore): "_"
-double dash: "--"
-(bracket | brack | left bracket): "{"
-(rbrack | are bracket | right bracket): "}"
+# question [mark]: "?"
+# (downscore | underscore | crunder): "_"
+doubledash: "--"
+emdash: "---"
 triple quote: "'''"
 (dot dot | dotdot): ".."
+(dot dot dot | dotdotdot | ellipses): "..."
 #ellipses: "…"
-ellipses: "..."
-(comma and | spamma): ", "
-plus: "+"
+swipe: ", "
 arrow: "->"
 dub arrow: "=>"
 new line: "\\n"
 carriage return: "\\r"
-line feed: "\\r\\n"
-empty dubstring:
-    '""'
-    key(left)
+# line feed: "\\r\\n"
 empty escaped (dubstring|dub quotes):
-    '\\"\\"'
+    insert('\\"\\"')
     key(left)
     key(left)
-empty string:
+(empty string | posh):
     "''"
     key(left)
+(empty quotes | coif):
+	insert('""')
+	key(left)
 empty escaped string:
     "\\'\\'"
     key(left)
     key(left)
-(inside parens | args):
+(empty parens | prex):
 	insert("()")
 	key(left)
-inside (squares | list): 
+prexy:
+	insert("()")
+empty (squares | brisk): 
 	insert("[]") 
 	key(left)
-inside (bracket | braces): 
+empty (braces | kirk): 
 	insert("{}") 
-	key(left)
-inside percent: 
-	insert("%%") 
-	key(left)
-inside quotes:
-	insert('""')
 	key(left)
 angle that: 
     text = edit.selected_text()
     user.paste("<{text}>")
-(bracket | brace) that: 
-    text = edit.selected_text()
-    user.paste("{{{text}}}")
-(parens | args) that: 
+(parens | prex) that: 
     text = edit.selected_text()
     user.paste("({text})")
-percent that: 
+(square | brisk) that: 
     text = edit.selected_text()
-    user.paste("%{text}%")
-quote that:
+    user.paste("[{text}]")
+(brace | kirk) that: 
+    text = edit.selected_text()
+    user.paste("{{{text}}}")
+(string | posh | prime) that:
+    text = edit.selected_text()
+    user.paste("'{text}'")
+(quote | coif) that:
     text = edit.selected_text()
     user.paste('"{text}"')
 
