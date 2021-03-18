@@ -99,49 +99,40 @@ indent [more]:
     edit.delete_line()
 
 ((clear | delete) left | junk):
-    key(backspace)
+    edit.delete()
 
 ((clear | delete) right | spunk):
-    key(delete)
+    edit.delete_forward()
 
 (clear | delete) up:
-    edit.extend_line_up()
-    edit.delete()
+    edit.delete_up()
 
 (clear | delete) down:
-    edit.extend_line_down()
-    edit.delete()
+    edit.delete_down()
 
 ((clear | delete) word | slurpies):
     edit.delete_word()
 
 ((clear | delete) word left | trough):
-    edit.extend_word_left()
-    edit.delete()
+    edit.delete_word_left()
 
 ((clear | delete) word right | kite):
-    edit.extend_word_right()
-    edit.delete()
+    edit.delete_word_right()
 
 ((clear | delete) way left | snipple):
-    edit.extend_line_start()
-    edit.delete()
+    edit.delete_way_left()
 
 ((clear | delete) way right | snipper):
-    edit.extend_line_end()
-    edit.delete()
+    edit.delete_way_right()
 
 (clear | delete) way up:
-    edit.extend_file_start()
-    edit.delete()
+    edit.delete_way_up()
 
 (clear | delete) way down:
-    edit.extend_file_end()
-    edit.delete()
+    edit.delete_way_down()
 
 (clear | delete) all:
-    edit.select_all()
-    edit.delete()
+    edit.delete_all()
 
 #copy commands
 (copy all | allstoosh):

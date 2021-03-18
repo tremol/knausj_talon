@@ -9,6 +9,9 @@ action(edit.cut):
 action(edit.delete):
 	key(backspace)
 
+action(edit.delete_forward):
+	key(delete)
+
 action(edit.delete_line):
 	edit.select_line()
 	edit.delete()
@@ -17,12 +20,46 @@ action(edit.delete_line):
 
 #action(edit.delete_sentence):
 
+action(edit.delete_up):
+    edit.extend_line_up()
+    edit.delete()
+
+action(edit.delete_down):
+    edit.extend_line_down()
+    edit.delete()
+
 action(edit.delete_word):
 	edit.select_word()
 	edit.delete()
 
-action(edit.down):
-	key(down)
+action(edit.delete_word_left):
+    edit.extend_word_left()
+    edit.delete()
+
+action(edit.delete_word_right):
+    edit.extend_word_right()
+    edit.delete()
+
+action(edit.delete_way_left):
+    edit.extend_line_start()
+    edit.delete()
+
+action(edit.delete_way_right):
+    edit.extend_line_end()
+    edit.delete()
+
+action(edit.delete_way_up):
+    edit.extend_file_start()
+    edit.delete()
+
+action(edit.delete_way_down):
+    edit.extend_file_end()
+    edit.delete()
+
+action(edit.delete_all):
+    edit.select_all()
+    edit.delete()
+
 
 #action(edit.extend_again):
 
