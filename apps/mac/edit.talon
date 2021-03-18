@@ -60,6 +60,8 @@ action(user.delete_all):
     edit.select_all()
     edit.delete()
 
+action(edit.down):
+    key(down)
 
 #action(edit.extend_again):
 
