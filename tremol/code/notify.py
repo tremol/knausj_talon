@@ -5,7 +5,6 @@ mod = Module()
 
 def on_phrase(j):
     global do_notify
-    print(do_notify)
     phrase = getattr(j["parsed"], "_unmapped", j["phrase"])
     phrase = " ".join(word.split("\\")[0] for word in phrase)
     if do_notify:

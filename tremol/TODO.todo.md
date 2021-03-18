@@ -1,14 +1,15 @@
 - [ ] Add shortcut words like 
-  - [ ] peachy
-  - [ ] trough
-  - [ ] sage
-  - [ ] ricky, lefty, lecksey, ricksy, snipple, snipper
-  - [ ] remove slap
   - [ ] posh, prank, coif, coalgap, 
-  - [ ] dizzle, rizzle
+  - [X] peachy
+  - [X] trough
+  - [X] sage
+  - [X] ricky, lefty, lecksey, ricksy, snipple, snipper
+  - [X] remove slap
+  - [X] dizzle, rizzle
 - [ ] add pop for control mouse
 - [ ] add hiss for scrolling
-- [ ] try other speech engine
-  - [ ] or get dragon working
+- [ ] get dragon working
+- [ ] add support for vim commands on terminal
 - [X] toggle os notifications off when sleeping
+- [X] try other speech engine
 

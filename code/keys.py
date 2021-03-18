@@ -234,7 +234,7 @@ alternate_keys = {
     "forward delete": "delete",
     "page up": "pageup",
     "page down": "pagedown",
-    # 'junk': 'backspace', # defined in generic_editor.talon
+    'junk': 'backspace', # also defined in generic_editor.talon. Defined here to allow key combinations
     'randall': 'escape',
     'tarp': 'tab',
     'shock': 'enter',
