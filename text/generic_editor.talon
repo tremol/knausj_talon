@@ -102,37 +102,37 @@ indent [more]:
     edit.delete()
 
 ((clear | delete) right | spunk):
-    edit.delete_forward()
+    user.delete_forward()
 
 (clear | delete) up:
-    edit.delete_up()
+    user.delete_up()
 
 (clear | delete) down:
-    edit.delete_down()
+    user.delete_down()
 
 ((clear | delete) word | slurpies):
     edit.delete_word()
 
 ((clear | delete) word left | trough):
-    edit.delete_word_left()
+    user.delete_word_left()
 
 ((clear | delete) word right | kite):
-    edit.delete_word_right()
+    user.delete_word_right()
 
 ((clear | delete) way left | snipple):
-    edit.delete_way_left()
+    user.delete_way_left()
 
 ((clear | delete) way right | snipper):
-    edit.delete_way_right()
+    user.delete_way_right()
 
 (clear | delete) way up:
-    edit.delete_way_up()
+    user.delete_way_up()
 
 (clear | delete) way down:
-    edit.delete_way_down()
+    user.delete_way_down()
 
 (clear | delete) all:
-    edit.delete_all()
+    user.delete_all()
 
 #copy commands
 (copy all | allstoosh):

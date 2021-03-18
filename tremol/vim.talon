@@ -9,10 +9,10 @@ action(edit.delete_word):
     key(ctrl-o)
     insert('diw')
 
-action(edit.delete_word_left):
+action(user.delete_word_left):
     key(ctrl-w)
 
-action(edit.delete_word_right):
+action(user.delete_word_right):
     key(ctrl-o)
     insert('de')
 
@@ -23,51 +23,51 @@ action(edit.delete_word_right):
 	# :q<CR>
 (vim | venom) force quit: "\\TqqQ"
 	# :q!<CR>
-# (vim | venom) help [<dgndictation>]: [":help ", text],
+# (vim | venom) help [<dgndictation>]: [":help ", text]
 
 #### UPDATE THESE WITH ACTIONS FROM ELSEWHERE AS NEEDED
 
-# marco: Key('/'),
-# dizzle: Key('u'),
-# rizzle: Key('ctrl-r'),
-# (trough | window): Key('ctrl-w'),
-# kite: [Key("ctrl-o"), "de"],
-# nudgle: [Key("alt-left"), Key("backspace")],
-# jolt: "yyp",
-# yank line: "yy",
-# shabble: Key("cmd-["),
+# marco: Key('/')
+# dizzle: Key('u')
+# rizzle: Key('ctrl-r')
+# (trough | window): Key('ctrl-w')
+# kite: [Key("ctrl-o"), "de"]
+# nudgle: [Key("alt-left"), Key("backspace")]
+# jolt: "yyp"
+# yank line: "yy"
+# shabble: Key("cmd-[")
 #     # nmap <D-[> <<
 #     # vmap <D-[> <gv
-# shabber: Key("cmd-]"),
+# shabber: Key("cmd-]")
 #     # nmap <D-]> >>
 #     # vmap <D-]> >gv
-# moment: Key("ctrl-o"),
-# auto complete: [Key("ctrl-x"), Key("ctrl-o")],
+# moment: Key("ctrl-o")
+# auto complete: [Key("ctrl-x"), Key("ctrl-o")]
 
 # # duplicating from generic editor:
 # # meta
-# (save it | sage): [Key("escape"), Key("cmd-s")],
-# randall sage: lambda m: app.notify('Just say "sage"!'),
-# (undo it | dizzle): Key("cmd-z"),
-# (redo it | rizzle): Key("cmd-shift-z"),
+# (save it | sage): [Key("escape"), Key("cmd-s")]
+# randall sage: lambda m: app.notify('Just say "sage"!')
+# (undo it | dizzle): Key("cmd-z")
+# (redo it | rizzle): Key("cmd-shift-z")
 # # clipboard
-# (clip cut | snatch): Key("cmd-x"),
-# (clip copy | stoosh): Key("cmd-c"),
-# (clip paste | spark): Key("cmd-v"),
+# (clip cut | snatch): Key("cmd-x")
+# (clip copy | stoosh): Key("cmd-c")
+# (clip paste | spark): Key("cmd-v")
 # # motions
-# peg: Key("alt-left"),
-# fran: Key("alt-right"),
-# ricky: Key("cmd-right"),
-# lefty: Key("cmd-left"),
+# peg: Key("alt-left")
+# fran: Key("alt-right")
+# ricky: Key("cmd-right")
+# lefty: Key("cmd-left")
 
 # from vim-impaired
-[insert] line above: "[ ",
-[insert] line below: "] ",
-switchee: "[e",
-switcho: "]e",
+[insert] line above: "[ "
+[insert] line below: "] "
+switchee: "[e"
+switcho: "]e"
 
 # commentary.vim
-trundle: key('cmd-/'),
+trundle: key('cmd-/')
 # nmap <D-/> gcc
 # vmap <D-/> gc
 
@@ -101,7 +101,7 @@ line oops up: "\\Gk"
 
 # aesthetics
 # TODO: add shortcuts to favorite color schemes
-color scheme: ":colorscheme ",
+color scheme: ":colorscheme "
 
 # Plugins
 toggle nerdy [tree]: "\\n"
@@ -128,23 +128,23 @@ plugin clean: "\\Tplc"
 	# :PluginClean<CR>
 
 # vim-unimpaired.vim
-buffer previous: "[b",
-buffer next: "]b",
-quick previous: "[q",
-quick next: "]q",
-tab unimpaired previous: "[t",
-tab unimpaired next: "]t",
+buffer previous: "[b"
+buffer next: "]b"
+quick previous: "[q"
+quick next: "]q"
+tab unimpaired previous: "[t"
+tab unimpaired next: "]t"
 
-[toggle] background: "yob",
-[toggle] cursor line: "yoc",
-[toggle] diff this: "yod",
-[toggle] highlight: "yoh",
-([toggle] invisibles | toggle list): "yol",
-[toggle] relative: "yor",
-toggle spell: "yos",
-[toggle] cursor column: "you",
-toggle wrap: "you",
-[toggle] crosshairs: "yox",
+[toggle] background: "yob"
+[toggle] cursor line: "yoc"
+[toggle] diff this: "yod"
+[toggle] highlight: "yoh"
+([toggle] invisibles | toggle list): "yol"
+[toggle] relative: "yor"
+toggle spell: "yos"
+[toggle] cursor column: "you"
+toggle wrap: "you"
+[toggle] crosshairs: "yox"
 
 # buffer shortcuts
 buffer name [<user.text>]: 
@@ -162,12 +162,12 @@ quick max: "\\qm"
 	# :cope<CR><c-w>_
 
 # diff shortcuts
-previous diff: "[c",
-next diff: "]c",
-diff put: "dp",
+previous diff: "[c"
+next diff: "]c"
+diff put: "dp"
 range diff put: "\\Tdpr"
 	# :diffp<M-Left>
-diff (get | obtain): "do",
+diff (get | obtain): "do"
 range diff get: "\\Tdgr"
 	# :diffg<M-Left>
 
