@@ -8,8 +8,8 @@
   - [X] dizzle, rizzle
 - [ ] add pop for control mouse
 - [ ] add hiss for scrolling
-- [ ] get dragon working
 - [ ] add support for vim commands on terminal
 - [X] toggle os notifications off when sleeping
 - [X] try other speech engine
+- [X] get dragon working
 

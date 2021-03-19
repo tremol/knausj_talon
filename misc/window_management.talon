@@ -1,12 +1,9 @@
-## Modified
-# added cmd-tab and keyboard shortcuts
-
 (app next | swick): key(cmd-tab)
 
 window (new|open): app.window_open()
 (window next | gibby): app.window_next()
 (window last | shibby): app.window_previous()
-window close: app.window_close()
+(window close | peachy): app.window_close()
 (focus | fox) <user.running_applications>: user.switcher_focus(running_applications)
 running list: user.switcher_toggle_running()
 launch <user.launch_applications>: user.switcher_launch(launch_applications)
