@@ -33,8 +33,9 @@ action(edit.delete_word):
 	edit.delete()
 
 action(user.delete_word_left):
-    edit.extend_word_left()
-    edit.delete()
+    key(alt-backspace)
+    # edit.extend_word_left()
+    # edit.delete()
 
 action(user.delete_word_right):
     edit.extend_word_right()

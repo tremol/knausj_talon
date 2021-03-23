@@ -30,10 +30,10 @@ action(user.delete_word_right):
 # marco: Key('/')
 # dizzle: Key('u')
 # rizzle: Key('ctrl-r')
-# (trough | window): Key('ctrl-w')
+window: key(ctrl-w)
 # kite: [Key("ctrl-o"), "de"]
 # nudgle: [Key("alt-left"), Key("backspace")]
-# jolt: "yyp"
+jolt: "yyp"
 # yank line: "yy"
 # shabble: Key("cmd-[")
 #     # nmap <D-[> <<

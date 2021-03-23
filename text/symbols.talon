@@ -29,6 +29,9 @@ empty escaped string:
 (empty parens | prex):
 	insert("()")
 	key(left)
+(empty brackets | brisk):
+	insert("[]")
+	key(left)
 prexy:
 	insert("()")
 empty (squares | brisk): 
