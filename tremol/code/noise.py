@@ -15,7 +15,7 @@ def set_to_false(vardict):
 # }
 # if sum(list(pop_modes.values())) > 1:
 #     set_to_false(pop_modes)
-all_modes = ['control', 'shift_click', 'drag']
+all_modes = ['control', 'shift_click', 'drag', 'macro']
 
 pop_mode = 'control'
 
@@ -92,6 +92,11 @@ def on_pop(active):
             actions.user.mouse_drag()
             actions.user.mouse_toggle_control_mouse()
             clicked_once = False
+
+    elif pop_mode == 'macro':
+        ignore_knausj_click = True
+        actions.user.macro_play()
+    
 
 
 ignore_knausj_click = False
