@@ -3,18 +3,7 @@ from talon_plugins import eye_mouse, eye_zoom_mouse
 
 mod = Module()
 
-def set_to_false(vardict):
-    for k in vardict.keys():
-        vardict[k] = False
-
-# defaults. At most one of these should be True, or else all will be set to False
-# pop_modes = {
-#     "control": True
-#     "shift_click": False
-#     "drag": False
-# }
-# if sum(list(pop_modes.values())) > 1:
-#     set_to_false(pop_modes)
+# TODO: decouple the click modes from the sleeping mouse mode
 
 all_modes = [
         'control', 'shift_click', 'drag',
@@ -27,7 +16,7 @@ pop_mode = 'control'
 @mod.action_class
 class Actions:
 
-    def mouse_toggle_pop_mode(mode: str) -> None:
+    def noise_toggle_pop_mode(mode: str) -> None:
         """toggle the pop mouse mode"""
         global pop_mode
         if pop_mode == mode:
@@ -38,17 +27,6 @@ class Actions:
         else:
             print(mode + ' is not a valid mode.')
             raise
-
-#     def mouse_toggle_pop_mode(mode: str) -> None:
-#         """toggle the pop mouse mode. Make sure only one is true at any moment."""
-#        old = pop_modes[mode]
-#        set_to_false(pop_modes)
-#        pop_modes[mode] = not old
-
-#     def mouse_toggle_pop_to_control():
-#         """use pop to toggle the control of the mouse"""
-#        global pop_to_control_mode
-#        pop_to_control_mode = not pop_to_control_mode
 
 
 
