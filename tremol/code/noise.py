@@ -15,7 +15,10 @@ def set_to_false(vardict):
 # }
 # if sum(list(pop_modes.values())) > 1:
 #     set_to_false(pop_modes)
-all_modes = ['control', 'shift_click', 'drag']
+all_modes = [
+        'control', 'shift_click', 'drag',
+        'shift_click_once', 'drag_once'
+        ]
 
 pop_mode = 'control'
 
@@ -26,7 +29,8 @@ class Actions:
         """toggle the pop mouse mode"""
         global pop_mode
         if pop_mode == mode:
-            pop_mode = ''
+            # pop_mode = ''
+            pass
         elif mode in all_modes:
             pop_mode = mode
         else:
@@ -65,7 +69,7 @@ def on_pop(active):
         actions.user.mouse_toggle_control_mouse()
         # ctrl.mouse_click(button=0, hold=16000) # unnecessary if the pop click setting is already on
 
-    elif pop_mode == 'shift_click':
+    elif pop_mode in ['shift_click', 'shift_click_once']:
         ignore_knausj_click = True
 
         if not eye_mouse_is_on():
@@ -79,8 +83,10 @@ def on_pop(active):
             actions.key("shift:up")
             actions.user.mouse_toggle_control_mouse()
             clicked_once = False
+            if pop_mode == 'shift_click_once':
+                pop_mode = 'control'
 
-    elif pop_mode == 'drag':
+    elif pop_mode in ['drag', 'drag_once']:
         ignore_knausj_click = True
 
         if not eye_mouse_is_on():
@@ -92,6 +98,8 @@ def on_pop(active):
             actions.user.mouse_drag()
             actions.user.mouse_toggle_control_mouse()
             clicked_once = False
+            if pop_mode == 'drag_once':
+                pop_mode = 'control'
 
 
 ignore_knausj_click = False
