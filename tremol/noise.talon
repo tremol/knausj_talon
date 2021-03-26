@@ -1,6 +1,7 @@
 popper click: user.mouse_toggle_pop_mode('control')
 popper shift: user.mouse_toggle_pop_mode('shift_click')
 popper drag: user.mouse_toggle_pop_mode('drag')
+popper macro: user.mouse_toggle_pop_mode('macro')
 # popper (repeat | creek): user.mouse_toggle_pop_to_repeat()
 
 popper shift once: user.mouse_toggle_pop_mode('shift_click_once')
