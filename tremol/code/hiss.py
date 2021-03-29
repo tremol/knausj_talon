@@ -6,7 +6,7 @@ mod.mode("hiss_to_scroll", "mode for commands that are available only when hiss 
 
 all_modes = [ 'scroll' ]
 
-hiss_mode = 'scroll'
+hiss_mode = ''
 
 @mod.action_class
 class Actions:
