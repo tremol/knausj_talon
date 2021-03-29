@@ -212,6 +212,7 @@ symbol_key_words = {
     "caret": "^",
     "amper": "&",
     "pipe": "|",
+    "spike": "|",
     "quote": '"',
     "dubquote": '"',
     "double quote": '"',

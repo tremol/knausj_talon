@@ -1,6 +1,6 @@
 (app next | swick): key(cmd-tab)
 
-window (new|open): app.window_open()
+(new window | window new): app.window_open()
 (window next | gibby): app.window_next()
 (window last | shibby): app.window_previous()
 (window close | peachy): app.window_close()
