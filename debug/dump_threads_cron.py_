@@ -1,0 +1,8 @@
+from talon import cron, debug
+
+
+def dump():
+    print(debug.dump_threads())
+
+
+cron.interval("15s", dump)
