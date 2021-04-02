@@ -86,7 +86,7 @@ working directory: "\\Tcwd"
 	# :lcd ..<CR>
 [change] local directory talon: "\\Tlct"
 	# :lcd ~/.talon/user/<CR>
-(vim | venom) grep: "\\Tvim"
+(vim | venom) grep [<user.text>]: "\\Tvim"
     # user.insert_cursor(":vimgrep /[|]/ **")
 	# :vim // **<Left><Left><Left><Left>
 source config: "\\Tvrc"
