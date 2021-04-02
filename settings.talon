@@ -15,6 +15,8 @@ settings():
     user.mouse_enable_pop_stops_scroll = 1
     #enable pop click with 'control mouse' mode
     user.mouse_enable_pop_click = 1
+    #toggle control mouse with a pop
+    user.mouse_toggle_control_with_pop = 1
     #When enabled, the 'Scroll Mouse' GUI will not be shown.
     user.mouse_hide_mouse_gui = 0
     #hide cursor when mouse_wake is called to enable zoom mouse

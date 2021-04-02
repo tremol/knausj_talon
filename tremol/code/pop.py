@@ -6,12 +6,12 @@ mod = Module()
 # TODO: decouple the click modes from the sleeping mouse mode
 
 all_modes = [
-        'control', 'shift_click', 'drag',
+        'click', 'shift_click', 'drag',
         'macro',
         'shift_click_once', 'drag_once'
         ]
 
-pop_mode = 'control'
+pop_mode = 'click'
 
 @mod.action_class
 class Actions:
@@ -20,7 +20,7 @@ class Actions:
         """toggle the pop mouse mode"""
         global pop_mode
         if pop_mode == mode:
-            # pop_mode = ''
+            pop_mode = ''
             pass
         elif mode in all_modes:
             pop_mode = mode
@@ -38,16 +38,24 @@ def eye_mouse_is_on():
 
 clicked_once = False
 
+setting_mouse_toggle_control_with_pop = mod.setting(
+    "mouse_toggle_control_with_pop",
+    type=int,
+    default=1,
+    desc="Toggle control mouse with a pop when enabled.",
+)
+
 def on_pop(active):
 
     global pop_mode
     global ignore_knausj_click
     global clicked_once
 
-    if pop_mode == 'control':
+    if pop_mode == 'click':
         ignore_knausj_click = False
-        actions.user.mouse_toggle_control_mouse()
-        # ctrl.mouse_click(button=0, hold=16000) # unnecessary if the pop click setting is already on
+        if setting_mouse_toggle_control_with_pop.get():
+            actions.user.mouse_toggle_control_mouse()
+            # ctrl.mouse_click(button=0, hold=16000) # unnecessary if the pop click setting is already on
 
     elif pop_mode in ['shift_click', 'shift_click_once']:
         ignore_knausj_click = True
@@ -64,7 +72,7 @@ def on_pop(active):
             actions.user.mouse_toggle_control_mouse()
             clicked_once = False
             if pop_mode == 'shift_click_once':
-                pop_mode = 'control'
+                pop_mode = 'click'
 
     elif pop_mode in ['drag', 'drag_once']:
         ignore_knausj_click = True
@@ -79,7 +87,7 @@ def on_pop(active):
             actions.user.mouse_toggle_control_mouse()
             clicked_once = False
             if pop_mode == 'drag_once':
-                pop_mode = 'control'
+                pop_mode = 'click'
 
     elif pop_mode == 'macro':
         ignore_knausj_click = True
