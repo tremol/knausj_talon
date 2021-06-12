@@ -47,6 +47,12 @@ midclick:
 	mouse_click()
 	# close the mouse grid
 	user.grid_close()
+
+doopark:
+    mouse_click()
+    mouse_click()
+    edit.paste()
+
 drag: 
 	user.mouse_drag()
 	# close the mouse grid

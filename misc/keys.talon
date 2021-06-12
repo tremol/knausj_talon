@@ -7,3 +7,6 @@ go <user.arrow_keys>: key(arrow_keys)
 <user.function_key>: key(function_key)
 <user.special_key>: key(special_key)
 <user.modifiers> <user.unmodified_key>: key("{modifiers}-{unmodified_key}")
+
+sky shock: key(shift-enter)
+tarsh: key(shift-tab)

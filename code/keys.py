@@ -122,7 +122,8 @@ ctx = Context()
 modifier_keys = {
     # If you find 'alt' is often misrecognized, try using 'alter'.
     "alt": "alt",  #'alter': 'alt',
-    "control": "ctrl",  #'troll':   'ctrl',
+    "control": "ctrl",  
+    'troll':   'ctrl',
     "shift": "shift",  #'sky':     'shift',
     "super": "super",
 }
@@ -177,6 +178,7 @@ symbol_key_words = {
     "right bracket": "]",
     "slash": "/",
     "backslash": "\\",
+    "leader": "\\",
     "minus": "-",
     "dash": "-",
     "equals": "=",

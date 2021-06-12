@@ -6,12 +6,27 @@ triple quote: "'''"
 (dot dot | dotdot): ".."
 (dot dot dot | dotdotdot | ellipses): "..."
 #ellipses: "…"
-swipe: ", "
-coalgap: ": "
 arrow: "->"
 dub arrow: "=>"
 new line: "\\n"
 carriage return: "\\r"
+
+swipe: ", "
+coalgap: ": "
+divvy: " / "
+deminus: " - "
+deplush: " + "
+equeft: " = "
+longqual: " == "
+derangle: " > "
+declangle: " < "
+
+coalshock:
+    insert(":")
+    key(enter)
+
+
+
 # line feed: "\\r\\n"
 empty escaped (dubstring|dub quotes):
     insert('\\"\\"')
@@ -33,14 +48,11 @@ empty escaped string:
 (empty brackets | brisk):
 	insert("[]")
 	key(left)
+(empty braces | kirk):
+	insert("{}")
+	key(left)
 prexy:
 	insert("()")
-empty (squares | brisk): 
-	insert("[]") 
-	key(left)
-empty (braces | kirk): 
-	insert("{}") 
-	key(left)
 angle that: 
     text = edit.selected_text()
     user.paste("<{text}>")
